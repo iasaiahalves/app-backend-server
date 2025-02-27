@@ -1,5 +1,7 @@
-require('dotenv').config();
-const API_BASE_URL = process.env.API_BASE_URL; // 
+
+// require('dotenv').config();
+
+const API_BASE_URL = 'https://app-backend-server-git-master-iasaiah-alves-projects.vercel.app/' //process.env
 
 document.addEventListener("DOMContentLoaded", function () {
     const uploadForm = document.getElementById("uploadForm");
