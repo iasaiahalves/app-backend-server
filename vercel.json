@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/api/user",
+      "dest": "/api/upload"
+    },
+    {
+      "src": "/api/user",
+      "dest": "/api/upload"
+    }
+  ]
+}
