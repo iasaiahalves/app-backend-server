@@ -1,5 +1,5 @@
 const http = require("http");
-const app = require("../src/app.js"); // Import the Express app
+const app = require("./src/app.js"); // Import the Express app
 const dotenv = require("dotenv");
 
 dotenv.config();
