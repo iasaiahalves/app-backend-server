@@ -1,12 +1,12 @@
-const API_URL = window.location.hostname === "localhost"
-    ? "http://localhost:3000/api/upload"
-    : "https://app-backend-server-g2juyizaz-iasaiah-alves-projects.vercel.app/api/upload";
+const API_BASE_URL = window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://app-backend-server-e5q187htd-iasaiah-alves-projects.vercel.app"; 
 
 document.addEventListener("DOMContentLoaded", function () {
     const uploadForm = document.getElementById("uploadForm");
     const imageInput = document.getElementById("imageInput");
     const uploadedImage = document.getElementById("uploadedImage");
-    const uploadStatus = document.getElementById("uploadStatus"); 
+    const uploadStatus = document.getElementById("uploadStatus");
 
     uploadForm.addEventListener("submit", async function (event) {
         event.preventDefault();
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("image", imageInput.files[0]);
 
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch(`${API_BASE_URL}/api/upload`, {
                 method: "POST",
                 body: formData,
             });
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.ok && result.file) {
                 uploadedImage.style.display = "none";
                 uploadStatus.innerHTML = "🎉 Uploaded Successfully!";
-                uploadStatus.style.color = "green"; 
+                uploadStatus.style.color = "green";
             } else {
                 uploadStatus.innerHTML = "❌ Upload failed: " + result.message;
                 uploadStatus.style.color = "red";
