@@ -1,11 +1,8 @@
-const API_BASE_URL = window.location.hostname === "localhost"
-    ? "http://localhost:3000"
-    : "https://app-backend-server-e5q187htd-iasaiah-alves-projects.vercel.app"; 
+const API_BASE_URL = "https://app-backend-server-e5q187htd-iasaiah-alves-projects.vercel.app"; // Use deployed backend
 
 document.addEventListener("DOMContentLoaded", function () {
     const uploadForm = document.getElementById("uploadForm");
     const imageInput = document.getElementById("imageInput");
-    const uploadedImage = document.getElementById("uploadedImage");
     const uploadStatus = document.getElementById("uploadStatus");
 
     uploadForm.addEventListener("submit", async function (event) {
@@ -28,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const result = await response.json();
             console.log("Server Response:", result);
 
-            if (response.ok && result.file) {
-                uploadedImage.style.display = "none";
+            if (response.ok) {
                 uploadStatus.innerHTML = "🎉 Uploaded Successfully!";
                 uploadStatus.style.color = "green";
             } else {
