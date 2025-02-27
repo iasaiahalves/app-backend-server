@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: "https://app-backend-server-fivnp53pp-iasaiah-alves-projects.vercel.app", 
+  origin: "https://app-backend-server-e5q187htd-iasaiah-alves-projects.vercel.app/", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));

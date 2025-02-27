@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://app-backend-server-fivnp53pp-iasaiah-alves-projects.vercel.app"; // Use deployed backend
+const API_BASE_URL = "https://app-backend-server-e5q187htd-iasaiah-alves-projects.vercel.app/"; // Use deployed backend
 
 document.addEventListener("DOMContentLoaded", function () {
     const uploadForm = document.getElementById("uploadForm");
