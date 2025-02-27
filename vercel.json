@@ -1,19 +1,15 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "root/server.js"
-    }
-  ],
   "builds": [
     {
-      "src": "root/server.js",
+      "src": "src/app.js",
       "use": "@vercel/node"
     }
   ],
-  "env": {
-    "PORT": "3000"
-  },
-  "devCommand": "PORT=3000 vercel dev"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/app.js"
+    }
+  ]
 }
