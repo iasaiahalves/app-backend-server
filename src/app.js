@@ -15,10 +15,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: ["https://app-backend-server.vercel.app"], 
+  origin: "*",  //  TEMPORARY: Allows all origins
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 
 //  Serve static files
