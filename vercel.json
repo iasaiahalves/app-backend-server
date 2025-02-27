@@ -1,15 +1,19 @@
 {
   "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/app.js"
+    }
+  ],
   "builds": [
     {
       "src": "src/app.js",
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "src/app.js"
-    }
-  ]
+  "env": {
+    "PORT": "4000"
+  },
+  "devCommand": "PORT=4000 vercel dev"
 }
