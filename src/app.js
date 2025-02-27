@@ -14,12 +14,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({
-  origin: "*",  //  TEMPORARY: Allows all origins
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+// Configure CORS with specific options
+const corsOptions = {
+  origin: 'https://app-backend-server-kep3z8sip-iasaiah-alves-projects.vercel.app', // Only allow requests from this origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+};
 
+app.use(cors(corsOptions)); // Use the configured CORS options
 
 
 //  Serve static files
