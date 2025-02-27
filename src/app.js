@@ -24,8 +24,9 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Use the configured CORS options
 
 
-//  Serve static files
+// Serve static files
 app.use(express.static(path.join(__dirname, "../public")));
+
 
 //  Routes (after middleware)
 app.use("/api/users", userRoutes);
