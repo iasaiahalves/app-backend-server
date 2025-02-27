@@ -9,15 +9,15 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Apply Middleware First
+//  Apply Middleware First
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// ✅ Serve static files
+//  Serve static files
 app.use(express.static(path.join(__dirname, "../public")));
 
-// ✅ Routes (after middleware)
+//  Routes (after middleware)
 app.use("/api/users", userRoutes);
 app.use("/api/upload", uploadRoutes);
 
@@ -25,8 +25,4 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-// ✅ Start Server
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-  console.log(`Server is running on port:${PORT}`);
-});
+module.exports = app;
