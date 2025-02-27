@@ -1,4 +1,5 @@
-const API_BASE_URL = "https://app-backend-server.vercel.app"; // Use stable backend domain
+const API_BASE_URL = "https://app-backend-server-kep3z8sip-iasaiah-alves-projects.vercel.app"; // Match the preview URL
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const uploadForm = document.getElementById("uploadForm");
