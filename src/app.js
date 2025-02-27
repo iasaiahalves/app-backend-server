@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Configure CORS with specific options
 const corsOptions = {
-  origin: 'https://app-backend-server-kep3z8sip-iasaiah-alves-projects.vercel.app', // Only allow requests from this origin
+  origin: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 };

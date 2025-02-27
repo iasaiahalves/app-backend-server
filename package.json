@@ -18,6 +18,7 @@
     "nodemon": "^3.1.9"
   },
   "main": "root/server.js",
+
   "scripts": {
   "start": "node root/server.js",
   "dev": "nodemon root/server.js"
