@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const userRoutes = require('./routes/userRoutes.js');
 const uploadRoutes = require('./routes/uploadRoutes.js');
 const path = require("path");
+const fileUpload = require('express-fileupload');
 
 
 dotenv.config();
@@ -13,6 +14,7 @@ const app = express();
 //  Apply Middleware First
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(fileUpload());
 
 // Configure CORS with specific options
 const corsOptions = {

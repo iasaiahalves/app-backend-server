@@ -190,6 +190,7 @@ __metadata:
     cors: "npm:^2.8.5"
     dotenv: "npm:^16.4.7"
     express: "npm:^4.21.2"
+    express-fileupload: "npm:^1.5.1"
     express-validator: "npm:^7.2.1"
     helmet: "npm:^8.0.0"
     jsonwebtoken: "npm:^9.0.2"
@@ -333,7 +334,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"busboy@npm:^1.0.0":
+"busboy@npm:^1.0.0, busboy@npm:^1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
   dependencies:
@@ -713,6 +714,15 @@ __metadata:
   version: 3.1.2
   resolution: "exponential-backoff@npm:3.1.2"
   checksum: 10c0/d9d3e1eafa21b78464297df91f1776f7fbaa3d5e3f7f0995648ca5b89c069d17055033817348d9f4a43d1c20b0eab84f75af6991751e839df53e4dfd6f22e844
+  languageName: node
+  linkType: hard
+
+"express-fileupload@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "express-fileupload@npm:1.5.1"
+  dependencies:
+    busboy: "npm:^1.6.0"
+  checksum: 10c0/6d2cae43958bd6bc7710a45ce71dfd1bb378611ea99c7c81aaa45655eff837ce969af8062b9c882ed05bbf179b4185b01b2d53f41ce5c242f7eac59cf280b1d1
   languageName: node
   linkType: hard
 
